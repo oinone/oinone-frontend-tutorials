@@ -27,6 +27,8 @@
     "@vue/cli-plugin-typescript": "5.0.8",
     "@vue/cli-service": "5.0.8",
     "@vue/compiler-sfc": "3.2.40",
+    "@types/lodash": "4.14.182",
+    "@types/lodash-es": "4.17.6",
     "cross-env": "7.0.3",
     "dotenv-webpack": "1.7.0",
     "sass": "1.44.0",
