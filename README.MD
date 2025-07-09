@@ -1,17 +1,23 @@
 ### 快速上手
 
-```
+``` shell
+
 # 初始化安装依赖
 npm i
-
-# 清理所有依赖
-npm run clean
 
 # 开发模式启动
 npm run dev
 
 # 构建生产用的包
 npm run build
+
+# 清理所有依赖
+
+## mac os
+npm run clean
+
+## windows os
+npm run clean:win
 
 ```
 

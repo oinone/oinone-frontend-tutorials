@@ -1,10 +1,12 @@
 {
   "name": "oinone-front-tutorials",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "scripts": {
-    "build": "node --max_old_space_size=8000 ./node_modules/.bin/vue-cli-service build --mode production",
-    "dev": "vue-cli-service serve"
+    "dev": "vue-cli-service serve",
+    "build": "node --max_old_space_size=4096 ./node_modules/.bin/vue-cli-service build ",
+    "clean": "rm -rf package-lock.json && rm -rf node_modules && rm -rf dist",
+    "clean:win": "if exist package-lock.json del package-lock.json  && if exist node_modules rd /s /q node_modules && if exist dist rd /s /q dist"
   },
   "dependencies": {
     "@element-plus/icons-vue": "2.0.9",
