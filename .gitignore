@@ -1,5 +1,10 @@
 node_modules
 .DS_Store
 dist
+e2e/.auth
+playwright-report
+test-results
 *.local
 package-lock.json
+.cache
+.idea
