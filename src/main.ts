@@ -1,4 +1,4 @@
-import 'ant-design-vue/dist/antd.min.css';
+import 'ant-design-vue/dist/reset.css';
 import 'element-plus/dist/index.css';
 import '@oinone/kunlun-vue-ui-antd/dist/oinone-kunlun-vue-ui-antd.css';
 import '@oinone/kunlun-vue-ui-el/dist/oinone-kunlun-vue-ui-el.css';
