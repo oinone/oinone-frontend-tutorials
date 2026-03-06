@@ -55,12 +55,8 @@ module.exports = {
   },
   devServer: {
     port: 8080,
-    hot: true,
-    compress: true,
-    client: {
-      overlay: false,
-      progress: true
-    },
+    allowedHosts: 'all',
+    compress: false,
     proxy: {
       '/pamirs': {
         changeOrigin: true,
