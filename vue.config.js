@@ -1,44 +1,24 @@
 const Dotenv = require('dotenv-webpack');
-const path = require('path');
 
 module.exports = {
   lintOnSave: false,
   configureWebpack: {
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          include: path.resolve('src'),
-          use: [
-            {
-              loader: 'thread-loader',
-              options: {
-                workers: 3
-              }
-            }
-          ]
-        }
-      ]
-    },
-    resolve: {
-      fallback: {
-        crypto: false
-      }
-    },
     plugins: [new Dotenv()]
   },
   chainWebpack: (config) => {
-    config.plugins.delete('fork-ts-checker');
-    config.cache({
-      type: 'filesystem'
+    config.plugin('fork-ts-checker').tap((args) => {
+      args[0].typescript.memoryLimit = 8192;
+      return args;
     });
     config.plugin('html').tap((args) => {
       args[0].chunksSortMode = (a, b) => {
         if (a.entry !== b.entry) {
+          // make sure entry is loaded last so user CSS can override
+          // vendor CSS
           return b.entry ? -1 : 1;
+        } else {
+          return 0;
         }
-        return 0;
       };
       return args;
     });
