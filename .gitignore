@@ -6,6 +6,7 @@ playwright-report
 test-results
 *.local
 package-lock.json
+public/oss
 .cache
 .idea
 public/oss
