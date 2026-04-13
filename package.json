@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "2.0.9",
-    "@oinone/kunlun-dependencies": "~6.2.0",
-    "@oinone/kunlun-vue-ui-antd": "~6.2.0",
-    "@oinone/kunlun-vue-ui-el": "~6.2.0",
+    "@oinone/kunlun-dependencies": "~6.4.0",
+    "@oinone/kunlun-vue-ui-antd": "~6.4.0",
+    "@oinone/kunlun-vue-ui-el": "~6.4.0",
     "rxjs": "6.6.7",
     "ml-matrix": "~6.10.8",
     "ant-design-vue": "3.2.14",
